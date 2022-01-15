@@ -10,7 +10,16 @@ test = {
 
 
 def locate_cards(cards, query):
-    pass
+    position = 0
+
+    while True:
+        if cards[position] == query:
+            return position
+
+        if position == len(cards):
+            return -1
+
+        position += 1
 
 
 print(locate_cards(**test["input"]) == test["output"])
